@@ -494,13 +494,24 @@ h1 span {
 
 .feature-card,
 .service-note {
-  display: grid;
-  grid-template-columns: 70px 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
   align-items: center;
   min-width: 0;
   padding: 22px;
+  overflow: hidden;
   border-right: 2px dashed rgba(160, 103, 53, 0.45);
+}
+
+.feature-card > div,
+.service-note > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  text-align: center;
 }
 
 .feature-card:last-child,
@@ -514,6 +525,7 @@ h1 span {
   color: #3f281b;
   font-size: 0.98rem;
   line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
 .pixel-badge {
